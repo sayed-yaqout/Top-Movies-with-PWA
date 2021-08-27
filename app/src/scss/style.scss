@@ -1,0 +1,18 @@
+@use "globals";
+@use "components";
+
+@media only screen and (min-width: 375px) {
+    /* for tablets */
+    .forimg1{
+      margin-right:0;
+    }
+  }
+  @media only screen and (min-width: 768px){
+
+    .whyChoose{
+      margin-top: 0rem;
+    }
+    .forimg1{
+      margin-right:-7rem;
+    }
+  }
