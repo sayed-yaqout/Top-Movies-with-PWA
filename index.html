@@ -12,10 +12,15 @@
   <!-- flickity css -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <!-- font awesome -->
-  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <!-- my custome css!-->
   <link rel="stylesheet" href="dist/style.css" />
-
+  <link rel="manifest" href="manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="app/src/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+  <meta name="theme-color" content="#FFFFFF">
 </head>
 
 <body>
@@ -29,74 +34,76 @@
             CINE APP</a>
           <div class="line"></div>
         </div>
-      
         <!-- ===========================================burger button==================================================== -->
-        <button class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon violet"></span>
         </button>
-            <!-- ================================================Nav button=============================== -->
-            <div class="forSearch collapse navbar-collapse justify-content-center w-100">
-              <form action="/" method="GET" class="form">
-                <input type="search" placeholder="Search favourite movies..." class="search-field" />
-                <button type="submit" class="search-button">
-                  <img src="app/src/img/search.png">
-                </button>
-              </form>
-            </div>
+        <!-- ================================================Nav button=============================== -->
+        <div class="forSearch collapse navbar-collapse justify-content-center w-100">
+          <form action="/" method="GET" class="form">
+            <input type="search" placeholder="Search favourite movies..." class="search-field" />
+            <button type="submit" class="search-button">
+              <img src="app/src/img/search.png">
+            </button>
+          </form>
+        </div>
         <!-- ================================================Nav links=============================== -->
 
         <div class="collapse navbar-collapse justify-content-center w-50" id="navbarNavDropdown">
           <ul class="navbar-nav lightFont align-items-center">
-          </li>
-          <li class="nav-item m-1">
-            <a class="nav-link  text-white-50 " href="#"><i class="fas fa-plus"></i></a>
-          </li>
-          <li class="nav-item m-1">
-            <a class="nav-link  text-white-50" href="#"><i class="fas fa-bell"></i></a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link  text-white-50 " href="#"><i class="fas fa-plus"></i></a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link  text-white-50" href="#"><i class="fas fa-bell"></i></a>
 
-          <li class="nav-item m-1">
-            <a class="nav-link  text-white-50" href="#">
-              <div class=" h-100"><img src="app/src/img/profile.PNG" alt="profile picture"></div>
-            </a>
-          </li>
-          <li id="login" class="nav-item  ">
-            <a class="nav-link text-white fs-6" href="#">   <h6> Tomas Jackson</h6> 
-            </a>
-          </li>
-          <li  class="nav-item  ">
-            <a class="nav-link text-white-50 fs-5" href="#"><i class="fas fa-angle-down"></i>
-            </a>
-          </li>
-        </ul>
+            <li class="nav-item m-1">
+              <a class="nav-link  text-white-50" href="#">
+                <div class=" h-100"><img src="app/src/img/profile.PNG" alt="profile picture"></div>
+              </a>
+            </li>
+            <li id="login" class="nav-item  ">
+              <a class="nav-link text-white fs-6" href="#">
+                <h6> Tomas Jackson</h6>
+              </a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link text-white-50 fs-5" href="#"><i class="fas fa-angle-down"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-      
+
       </div>
     </nav>
     <!-- <div class="container-fluid">
       <div class="row"> -->
-        <!-- <div class=""></div> -->
-          <!-- ================================================NavBar========================================================= -->
+    <!-- <div class=""></div> -->
+    <!-- ================================================NavBar========================================================= -->
 
 
-          
 
-        <!-- </div> -->
-      <!-- </div>
+
+    <!-- </div> -->
+    <!-- </div>
     </div> -->
     <!-- <div class="row">
       <div class="col-12"> -->
 
-        <!-- =======================================nowpalying section ========================================================-->
-        <div class="gallery nowPlaying">
+    <!-- =======================================nowpalying section ========================================================-->
+    <div class="gallery nowPlaying">
 
-        </div>
-      <!-- </div>
+    </div>
+    <!-- </div>
     </div> -->
     <!-- </div> -->
   </section>
 
-  <!-- ==========================================================toprated section================================================= -->
-  <section class="allCountries text-center">
+  <!-- ==========================================================movies section================================================= -->
+  <section class="text-center">
     <!-- =================================================Top rated========================== -->
     <div class="d-flex justify-content-between my-3">
       <h5 class="px-5">Top Rated</h5>
@@ -130,11 +137,7 @@
   <script id="moviestemp" type="x-tmpl-mustache">
       <div class="gallery-cell ">
         <div class="c-cell">
-
-          
             <img src=" {{poster}}" alt="poster" class="rounded">
-           
-      
         </div>
       </div>
     </script>
@@ -142,11 +145,7 @@
   <script id="trendingTemp" type="x-tmpl-mustache">
       <div class="gallery-cell">
         <div class="c-cell">
-
-          
             <img src=" {{poster}}" alt="poster" class="rounded">
-           
-      
         </div>
       </div>
     </script>
@@ -157,11 +156,9 @@
       <div>
         <h6 class="text-white-50 fs-6">Now Playing</h6>
         <h1>{{title}}: </h1>
-        <h5>{{genre}}-{{duration}}</h5>
         <!-- <img src=" {{poster}}" alt="poster" class="rounded"> -->
-        <a href="{{trailerLink}}" class="text-white fs-5 d-flex align-items-start"> <i class="far fa-play-circle fs-3"></i> <p class="mx-1">Play Trailer</p> </a>
+        <a  class="text-white fs-5 d-flex align-items-start"> <i class="far fa-play-circle fs-3"></i> <p class="mx-1">Play Trailer</p> </a>
       </div>
-      
       </div>
     </div>
   </script>
@@ -171,7 +168,5 @@
   <script src="https://unpkg.com/mustache@latest"></script>
   <!-- ==================================my main JS file============================================= -->
   <script src="dist/main.js"></script>
-
 </body>
-
 </html>
