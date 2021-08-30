@@ -4,9 +4,9 @@ const TRENDING_API_KEY= "https://api.themoviedb.org/3/trending/all/day?api_key=4
 const NOWPLAYING_API_KEY="https://api.themoviedb.org/3/movie/now_playing?api_key=4ad8cb5b2b8f3f393d5fbb1e73651f69&language=en-US&page=1";
 //============================================================service workers registeration============================\\
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js')
-  .then(reg=>console.log("SW reged",reg))
-  .catch(err=>console.log("SW didn't register",err))
+  navigator.serviceWorker.register('/sw.js')
+    .then(reg => console.log('service worker registered',reg))
+    .catch(err => console.log('service worker not registered', err));
 }
 
 //============================================================MOVIES API================================================\\
